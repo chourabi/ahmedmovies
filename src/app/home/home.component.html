@@ -1,0 +1,29 @@
+<div class="container">
+
+
+    <div class="my-5">
+        <div class="row">
+            <form style="width: 100%;" [formGroup]="s" (ngSubmit)="searchFor()" >
+                <div class="row">
+                    <div class="col-sm-8">
+                        <input formControlName="q" type="text" name="" id="" class="form-control">
+                    </div>
+                    <div class="col-sm-4">
+                        <button type="submit" class="btn btn-primary btn-block">SEARCH</button>
+                    </div>
+                </div>
+            </form>
+            
+        </div>
+    </div>
+
+
+    <div class="listmovies row">
+
+        <div class="col-sm-3 my-2 " *ngFor="let movie of movies" >
+            <app-moviecard imgURL="{{movie.large_cover_image}}" id="{{movie.id}}" title="{{movie.title_english}}" ></app-moviecard>
+        </div>
+
+    </div>
+
+</div>

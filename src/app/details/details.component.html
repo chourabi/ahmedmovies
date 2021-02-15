@@ -1,0 +1,19 @@
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-4">
+            <img [src]="movie.large_cover_image" alt="" width="100%">
+        </div>
+        <div class="col-sm-8">
+            <h3> {{movie.title_english}} </h3>
+            <p>
+                {{movie.description_full}}
+            </p>
+
+            <div class="row">
+                <a class="btn btn-primary" href="{{l.url}}" *ngFor="let l of movie.torrents"> {{l.quality}} </a>
+            </div>
+        </div>
+    </div>
+</div>
